@@ -4,4 +4,4 @@ const Miimagen = ({src,alt}) => {
     )
 }
 
-export default  Miimagen;
+export default  Miimagen; 
