@@ -12,7 +12,8 @@ function App() {
   const Foto = ".src/components/Imagen/Carrito.png";
 
   return (
-    <>
+    
+    <div>
     <Header/>
     <Mititulo titulo= "TECOMLINE"/>
     <h1>Tecnología y Componentes Online </h1>
@@ -20,7 +21,7 @@ function App() {
     <Miboton titulo= "Reestablecer"/>
     <Miimagen src={Foto} alt="Wa0s"/>
     <Footer/>
-    </>
+    </div>
   )
 }
 

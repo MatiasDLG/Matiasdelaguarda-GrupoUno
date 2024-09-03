@@ -1,6 +1,6 @@
 import './Header.css'
 export default function Header(){
-    return(<><h1>Hola Soy Un Header</h1></>)
+    return(<h1>Hola Soy Un Header</h1>)
 }
 
 
