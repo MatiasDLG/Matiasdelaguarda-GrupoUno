@@ -1,7 +1,7 @@
-const Miimagen = ({src,alt}) => {
+const Miimagen = ({src,alt,width,height}) => {
     return(
-        <img src={src} alt={alt}  />
-    )
-}
+        <img src={src} alt={alt} width={width} height={height} />
+    );
+};
 
 export default  Miimagen; 

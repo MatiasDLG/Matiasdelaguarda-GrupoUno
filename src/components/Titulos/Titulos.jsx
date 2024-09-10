@@ -1,6 +1,9 @@
 const Mititulo = ({titulo}) => {
     return(
-        <h1>{titulo}</h1>
+        <section className="Mi-titulo">
+             <h1>{titulo}</h1>
+         </section>
+
     )
 }
 
