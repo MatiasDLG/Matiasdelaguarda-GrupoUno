@@ -7,10 +7,10 @@ export default function Header(){
       <div className="header-logo"><Miimagen src={logo} alt="Carrito" width="50px" height="auto" /></div>
       <nav className="menu">
         <ul>
-          <li><a href="Inicio">Inicio</a></li>
-          <li><a href="Acerca">Acerca</a></li>
-          <li><a href="Servicios">Servicios</a></li>
-          <li><a href="Contactos">Contactos</a></li>
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#Acerca">Acerca</a></li>
+          <li><a href="#Servicios">Servicios</a></li>
+          <li><a href="#Contactos">Contactos</a></li>
         </ul>
       </nav>
     </header>   
