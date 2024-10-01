@@ -7,14 +7,15 @@
 
   function App() {
     return (
-      <div className="contenido">
+      <div>
         <Header/>
-        <section className="section">  
+        <section className="m-0 p-0 pt-60 none max-w-1200 box-border text-center ">  
           <Mititulo titulo= "TECOMLINE"/>
           <h1>Tecnología y Componentes Online</h1>
         </section>
         <Footer/>
       </div>
+
     )
   }
 
