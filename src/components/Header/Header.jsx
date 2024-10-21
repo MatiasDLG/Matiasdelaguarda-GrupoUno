@@ -3,7 +3,7 @@ import Miimagen from '../Imagen/Imagen';
 import logo from '../../assets/img/carrito.png';
 export default function Header(){
   return(
-    <header className="cabezal">
+    <header className="fixed top-0	left-0 w-full box-border	flex justify-between	items-center	py-10	px-20	bg-gray-800	">
       <div className="header-logo"><Miimagen src={logo} alt="Carrito" width="50px" height="auto" /></div>
       <nav className="menu">
         <ul>
