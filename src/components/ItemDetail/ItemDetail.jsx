@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../../data/asyncMock';
 import Loading from '../Loading/Loading';
+import { useCartStore } from '../../Store/Store';
 
 export default function ItemDetail() {
     const { productId } = useParams();
     const [product, setProduct] = useState({ stock: 0 });
     const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState(1);
+    const addToCart = useCartStore((state) => state.addToCart);
 
     useEffect(() => {
         getProductById(productId).then((data) => {
@@ -28,6 +30,15 @@ export default function ItemDetail() {
         }
     };
 
+    const handleAddToCart = () => {
+        if (quantity <= product.stock) {
+            addToCart({ ...product, quantity });
+            alert(`${product.name} añadido al carrito.`);
+        } else {
+            alert('Cantidad excede el stock disponible.');
+        }
+    };
+
     const totalPrice = product.price * quantity;
 
     if (loading) {
@@ -42,10 +53,9 @@ export default function ItemDetail() {
         <div className='min-h-screen flex items-center justify-center py-10'>
             <div className='max-w-xl w-full bg-white rounded-lg shadow-lg overflow-hidden p-6'>
                 <div className="flex flex-col items-center gap-6">
-                    <img src={product.img} alt={product.name} className='w-full h-auto max-h-80 object-cover rounded-md' />
+                    <img src={product.img} alt={product.name} className='w-full h-auto max-h-100 object-cover rounded-md' />
                     
                     <h1 className='text-2xl font-semibold text-gray-900 text-center'>{product.name}</h1>
-                    <p className='text-gray-700 text-center'>{product.description}</p>
 
                     <div className='flex items-center justify-between w-full text-gray-800'>
                         <span className='font-semibold'>En stock: {product.stock}</span>
@@ -60,9 +70,13 @@ export default function ItemDetail() {
 
                     <div className='mt-6 text-center w-full'>
                         <p className='text-lg font-semibold'>Total: <span className='text-blue-800'>${totalPrice}</span></p>
-                        <button className='mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-500 transition duration-200'>
+                        <button
+                            onClick={handleAddToCart}
+                            className='mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-500 transition duration-200'
+                        >
                             Añadir al carrito
                         </button>
+                        <p className='text-gray-700 text-center mt-20'>{product.description}</p>
                     </div>
                 </div>
             </div>

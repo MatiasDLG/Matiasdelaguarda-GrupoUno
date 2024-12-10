@@ -1,7 +1,7 @@
 export default function Nosotros() {
     return(
         <div className="container mx-auto px-4 py-10 text-white">
-            <h1 className="text-center text-4xl font-bold mb-6">Acerca de TECOMLINE</h1>
+            <h1 className="text-center text-4xl font-bold mb-6">TECOMLINE</h1>
             <p className="text-lg text-center mb-4">
                 Bienvenido a TECOMLINE, tu tienda de confianza para productos tecnológicos de alta calidad.
             </p>

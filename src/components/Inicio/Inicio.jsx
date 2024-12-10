@@ -3,14 +3,10 @@ import ItemList from "../ItemList/ItemList";
 
 export default function Inicio() {
     const Background = './background_carrito.png';
-    const Logo = '/tecomline_logo.png' 
     return (
         <div className="min-h-screen">
-            <div
-                className="h-[900px] w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${Background})` }}>
+            <div className="h-[900px] w-full bg-cover bg-center" style={{ backgroundImage: `url(${Background})` }}>
                 <div className="container mx-auto max-w-[1170px] flex flex-col h-full justify-center h-[500px]">
-
                     <h2 className="text-center text-[#ffffff] font-bold text-[90px] leading-[90px] uppercase">
                         TECOMLINE 
                     </h2>
@@ -19,7 +15,7 @@ export default function Inicio() {
                     </Link>
                 </div>
             </div>
-            <div className="container mx-auto max-w-[1170px] my-[50px]">
+            <div className="container mx-auto max-w-[1200px] my-[50px]">
                 <ItemList />
             </div>
         </div>
